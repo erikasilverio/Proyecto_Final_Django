@@ -1,0 +1,694 @@
+@import url(../css/header.css);
+@import url(../css/footer.css);
+@import url(../css/styles.css);
+
+/*AVISOS*/
+.notices_posters {
+    padding-bottom: 3rem;
+}
+
+#notices {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 4px 4px #00000014;
+}
+
+#notices input[type=radio] {
+    display: none;
+}
+
+
+#notice_poster label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#notices_container {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#notice1:checked~#notices_container .inner_container {
+    margin-left: 0;
+}
+
+#notice2:checked~#notices_container .inner_container {
+    margin-left: -100%;
+}
+
+#notice3:checked~#notices_container .inner_container {
+    margin-left: -200%;
+}
+
+#notice4:checked~#notices_container .inner_container {
+    margin-left: -300%;
+}
+
+#notices_container .inner_container {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+#notices_container .notice_wrapper {
+    width: 25%;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 250px;
+}
+
+.notice_wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.notice_wrapper .visible {
+    display: block;
+    height: auto;
+    max-height: 500px;
+}
+
+.notice_wrapper .oculta {
+    display: none;
+}
+
+.notice_text {
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 0;
+}
+
+.notice_link {
+    position: absolute;
+    top: 65%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    border: solid 2px var(--light-bg-solid);
+    background-color: transparent;
+    color: var(--light-bg-solid);
+    font-weight: 500;
+}
+
+.text_notice_container {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    z-index: 110;
+    background: linear-gradient(80deg, rgb(0 0 0) 20%, rgb(0 0 0 / 53%) 50%, rgb(0 0 0 / 8%) 80%);
+    clip-path: polygon(0 0, 39% 0, 82% 100%, 0% 100%);
+}
+
+
+#labels_container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 1.6rem;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.297);
+    gap: 1rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    border-radius: 1rem;
+    align-content: center;
+}
+
+#labels_container label {
+    display: inline-block;
+    width: 1.5rem;
+    height: 0.4rem;
+    border-radius: 20%;
+    background: #959595cb;
+}
+
+#labels_container label:hover {
+    scale: 1.2;
+}
+
+#notice1:checked~#labels_container label:nth-child(1),
+#notice2:checked~#labels_container label:nth-child(2),
+#notice3:checked~#labels_container label:nth-child(3),
+#notice4:checked~#labels_container label:nth-child(4) {
+    background: #ffffff;
+}
+
+.notice_link:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+/*AUTOS POR MARCA*/
+.content_slide_logo {
+    width: 100%;
+    background-color: #3374db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.car_by_brand {
+    padding: 2rem 0;
+    background-color: #5e8bd8;
+}
+
+.select_brand_text {
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+#slider_logo {
+    display: flex;
+    justify-content: center;
+}
+
+
+#slider_logo input[type=radio] {
+    display: none;
+}
+
+.flex_cont {
+    background-color: white;
+    width: 500px;
+    min-width: 180px;
+    border-radius: 1rem;
+}
+
+#controls {
+    margin: -80px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#slider_logo label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides_logo {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.slide-content {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.container_brand {
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+}
+
+.container_brand:hover {
+    scale: 1.05;
+}
+
+#slide_logo1:checked~#slides_logo .inner {
+    margin-left: 0;
+}
+
+#slide_logo2:checked~#slides_logo .inner {
+    margin-left: -100%;
+}
+
+#slide_logo3:checked~#slides_logo .inner {
+    margin-left: -200%;
+}
+
+#slide_logo4:checked~#slides_logo .inner {
+    margin-left: -300%;
+}
+
+#slides_logo .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+#slides_logo .slide_logo {
+    width: 25%;
+    height: 100%;
+    padding: 1rem 0.5rem;
+}
+
+#slides_logo .inner .slide-content .container_brand .brand_link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: #949494;
+}
+
+#bullets label:hover {
+    scale: 1.2;
+}
+
+#slide_logo1:checked~#bullets label:nth-child(1),
+#slide_logo2:checked~#bullets label:nth-child(2),
+#slide_logo3:checked~#bullets label:nth-child(3),
+#slide_logo4:checked~#bullets label:nth-child(4) {
+    background: #000000;
+}
+
+/*GRID AUTOS POR TIPO CARROCERIA*/
+.car_body_type {
+    background-color: #fbfbfb;
+    padding: 2rem 0;
+}
+
+.grid_container {
+    width: 100%;
+}
+
+.car_body_type_title {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.grid_container_content {
+    width: 100%;
+}
+
+.grid_col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1.5rem;
+}
+
+.segment_content {
+    box-shadow: 0 0.063rem 0.313rem #46464626, 0 0.125rem 0.125rem #46464626, 0 0.188rem 0.125rem -0.125rem #46464626;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.segment_content h3 {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.segment_content img {
+    padding: 0.5rem 0;
+}
+
+.segment_content:hover {
+    transform: scale(1.05);
+}
+
+
+/*AUTOS NUEVOS*/
+.new_cars {
+    padding: 1rem 0;
+}
+
+.title_container {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.title_new_auto {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#new_cars_info {
+    padding-bottom: 1rem;
+}
+
+.compare_ref {
+    text-align: center;
+    border-radius: 1rem;
+    border: solid black;
+}
+
+
+.car_cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: rgb(255 255 255);
+    box-shadow: 0 0.063rem 0.313rem #46464626, 0 0.125rem 0.125rem #46464626, 0 0.188rem 0.125rem -0.125rem #46464626;
+    ;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 20px #00000014;
+    transform: scale(1.03);
+}
+
+.card_info {
+    padding: 0.8rem;
+}
+
+.new_cars .card .card_price {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.card_title {
+    padding-bottom: 0.5rem;
+    font-size: larger;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.see_details {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 0.4rem;
+    border: solid 1px black;
+    border-radius: 0.5rem;
+}
+
+.car_price {
+    font-weight: 600;
+    color: #3374db;
+}
+
+.see_details:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+#at1,
+#at2,
+#at3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*COMPARE CAR*/
+
+.compare_car_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#compare_car_info {
+    margin: 1rem 0;
+}
+
+.compare_car_container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-light-transparent);
+    border-radius: 2rem;
+}
+
+.compare_container_img {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(359deg, #75a6fb 0%, #5887da 20%, #3374db 40%, #3374db 60%, #5887da 79%, #75a6fb 100%);
+    display: flex;
+}
+
+.compare_container_img img {
+    width: 50%;
+}
+
+.compare_select_info_link {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: solid 2px var(--light-bg-solid);
+    background-color: rgb(0 0 0 / 59%);
+    color: var(--light-bg-solid);
+    font-size: 1.3rem;
+}
+
+.compare_info_container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000030;
+}
+
+.compare_car_container .compare_select_info_link:hover {
+    scale: 1.05;
+    background-color: #000000;
+}
+
+/* VENTA DE AUTO*/
+.sell_car {
+    background-color: #fafafafa;
+}
+
+.sell_car_container {
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.sell_text_container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.cont_img_sell {
+    width: 35%;
+    display: flex;
+}
+
+.title_sell_car {
+    padding-bottom: 1rem;
+}
+
+.sell_link {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: solid 1px #000000;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.conten {
+    display: flex;
+}
+
+.sell_link:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid_col {
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        gap: 1.2rem;
+    }
+
+    #bullets label {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /*NOTICIAS */
+    .text_notice_container {
+        clip-path: polygon(50% 60%, 0 50%, 0 100%, 100% 100%, 100% 50%);
+        width: 100%;
+        left: 50%;
+        background: linear-gradient(0deg, rgba(30, 34, 47, 1) 33%, rgba(30, 34, 47, 0.8267682072829132) 37%, rgba(30, 34, 47, 0.6222864145658263) 40%, rgba(30, 34, 47, 0.4766281512605042) 44%);
+
+    }
+
+    .notice_wrapper .visible {
+        display: none;
+    }
+
+    .notice_wrapper .oculta {
+        display: block;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #slider_logo {
+        min-width: 50%;
+    }
+
+    #bullets label {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    #slides_logo .slide_logo {
+        padding: 0.5rem;
+    }
+
+    #labels_container {
+        padding: 0.2rem 0.5rem;
+        bottom: 3%;
+        left: 3%;
+    }
+
+    #labels_container label {
+        width: 1.2rem;
+        height: 0.4rem;
+    }
+
+    .slide-content {
+        gap: 0.5;
+    }
+
+    .notice_text {
+        width: 100%;
+        top: 69%;
+        left: 50%;
+        font-size: medium;
+    }
+
+    .notice_link {
+        font-weight: 500;
+        width: 80%;
+        top: 82%;
+        left: 50%;
+        padding: 0.4rem;
+        font-size: small;
+    }
+
+    /*TIPO DE CARROCERIA*/
+    .car_body_type_title {
+        padding: 1rem 0;
+    }
+
+
+    .grid_col {
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        gap: 0.9rem;
+    }
+
+    .car_cards_container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card_title {
+        font-size: large;
+    }
+
+    .title_container {
+        margin: 0;
+    }
+
+    /*VENDE TU AUTO*/
+    .sell_car_container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sell_text_container {
+        width: 100%;
+    }
+
+    .title_sell_car {
+        text-align: center;
+    }
+
+    #car_sell_info {
+        text-align: center;
+    }
+
+    .cont_img_sell {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .seell_img {
+        width: 40%;
+        min-width: 200px;
+    }
+
+    .conten {
+        justify-content: center;
+    }
+
+    /*COMPARE CAR*/
+    .compare_car_container {
+        border-radius: 1rem;
+    }
+
+
+    .compare_select_info_link {
+        font-size: unset;
+    }
+}

@@ -1,0 +1,32 @@
+{% load static %}
+<header class="page_header">
+        <section class="container">
+            <nav class="navbar">
+                <picture class="logo_container">
+                    <a href="{% url 'index' %} ">
+                        <img class="logo" src="{% static 'img/logo_white.png' %}" alt="Logo">
+                    </a>
+                </picture>
+                <div class="navigation_content">
+                    <div class="navigation_content">
+                    <ul class="nav_menu nav_menu_visible">
+                        <li class="nav_menu_item"><a href="{% url 'index' %}" class="navbar_Item">Inicial</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'garage' %}" class="navbar_Item">Garage</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'venta_auto' %}" class="navbar_Item">Vende tu Auto</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'contacto' %}" class="navbar_Item">Contacto</a></li>
+                    </ul>
+                    <div class="container_user_section">
+                        <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>
+                        <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a>
+                        <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a>
+                    </div>
+                </div>
+                <button class="hamburger">
+                    <div class="hamburger_line1"></div>
+                    <div class="hamburger_line2"></div>
+                    <div class="hamburger_line3"></div>
+                </button>
+            </nav>
+        </section>
+        </section>
+    </header>

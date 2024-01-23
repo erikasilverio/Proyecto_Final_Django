@@ -1,0 +1,43 @@
+{% load static %}
+<footer class="footer_page">
+    <section class="container">
+        <section class="footer_section">
+            <a class="logo_container" href="{% url 'index' %} ">
+                <img class="logo" src="{% static 'img/logo_white.png' %}" alt="Logo">
+            </a>
+            <ul class="fotter_column">
+                <span class="footer_column_title">¿NECESITA AYUDA?</span>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Concesionarios</a></li>
+            </ul>
+            <ul class="fotter_column">
+                <span class="footer_column_title">ATENCION AL CLIENTE</span>
+                <li><a href="#">0800 700-1234</a></li>
+            </ul>
+            <ul class="fotter_column">
+                <span class="footer_column_title">CONDICIONES LEGALES</span>
+                <li><a href="#">Politicas de privacidad</a></li>
+                <li><a href="#">Menciones Legales</a></li>
+            </ul>
+        </section>
+        <div class="footer_section_social">
+            <div class="social_links">
+                <span>Segui a ATM en nuestras redes sociales:</span>
+                <ul class="social_media_container">
+                    <li>
+                        <a href="https://www.facebook.com" class="social_fb"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" class="social_tw"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" class="social_yt"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <span>@Copyright ATM Todos los derechos reservados.</span>
+        </div>
+    </section>
+</footer>

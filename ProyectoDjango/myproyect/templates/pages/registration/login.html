@@ -1,0 +1,151 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="icon" href="{% static 'img/icon/icono_ws-transformed.ico' %}">
+    <title>Login</title>
+</head>
+<body>
+
+<!--ACA ESTA LA BOTONERA -->
+
+
+
+<header class="page_header">
+    <section class="container">
+        <nav class="navbar">
+            <picture class="logo_container">
+                <a href="{% url 'index' %} ">
+                    <img class="logo" src="{% static 'img/logo_white.png' %}" alt="Logo">
+                </a>
+            </picture>
+            <div class="navigation_content">
+                <div class="navigation_content">
+                    <ul class="nav_menu nav_menu_visible">
+                        <li class="nav_menu_item"><a href="{% url 'index' %}" class="navbar_Item">Inicial</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'garage' %}" class="navbar_Item">Garage</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'venta_auto' %}" class="navbar_Item">Vende tu Auto</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'contacto' %}" class="navbar_Item">Contacto</a></li>
+                    </ul>
+                    <div class="container_user_section">
+                        <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>
+                        <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a>
+                        <!--- <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a> --->
+                        <a id="profile" class="user_section" href="{% url 'login' %}">Login</a>
+                        <!--- <a id="profile" class="user_section" href="{% url 'logout' %}">Logout</a>--->
+                    </div>
+            </div>
+            <button class="hamburger">
+                <div class="hamburger_line1"></div>
+                <div class="hamburger_line2"></div>
+                <div class="hamburger_line3"></div>
+            </button>
+        </nav>
+    </section>
+    </section>
+</header>
+
+
+
+<!---ACA ESTA EL BOX PARA HACER EL LOGIN -->
+
+<div class="login_container">
+    <form class="login_form" method="POST">
+
+        {% csrf_token %}
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+
+         <!-- campos de entrada para nome de usuário (username) e senha (password) -->
+
+        <h2>Iniciar Sesión</h2>
+        <div class="input_container">
+            <input type="text" id="idusername" name="username" required maxlength="70" />
+            <label for="idusername">Usuario</label>
+        </div>
+
+        <div class="input_container">
+            <input type="password" id="id_password" name="password" required maxlength="" />
+            <label for="id_password">Contraseña</label>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+               
+    </form>
+
+    <!-- Exibir mensagens de erro -->
+{% if error_message %}
+    <p>{{ error_message }}</p>
+{% endif %}
+
+
+</div>
+    
+
+
+    
+<!---FIN DEL BOX PARA HACER EL LOGIN -->
+    
+
+<!--AQUI INICIO DEL FOOTER-->
+
+
+
+<footer class="footer_page">
+    <section class="container">
+        <section class="footer_section">
+            <a class="logo_container" href="{% url 'index' %}">
+                <img class="logo" src="{% static 'img/logo_white.png' %} " alt="Logo">
+            </a>
+            <ul class="fotter_column">
+                <span class="footer_column_title">¿NECESITA AYUDA?</span>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Concesionarios</a></li>
+            </ul>
+            <ul class="fotter_column">
+                <span class="footer_column_title">ATENCION AL CLIENTE</span>
+                <li><a href="#">0800 700-1234</a></li>
+            </ul>
+            <ul class="fotter_column">
+                <span class="footer_column_title">CONDICIONES LEGALES</span>
+                <li><a href="#">Politicas de privacidad</a></li>
+                <li><a href="#">Menciones Legales</a></li>
+            </ul>
+        </section>
+        <div class="footer_section_social">
+            <div class="social_links">
+                <span>Segui a ATM en nuestras redes sociales:</span>
+                <ul class="social_media_container">
+                    <li>
+                        <a href="https://www.facebook.com" class="social_fb"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" class="social_tw"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" class="social_yt"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <span>@Copyright ATM Todos los derechos reservados.</span>
+        </div>
+    </section>
+</footer>
+
+<script src="https://kit.fontawesome.com/2bfac4fd93.js" crossorigin="anonymous"></script>
+
+<script src="{% static '/js/nav_bar.js' %}"></script>
+
+</body>
+</html>

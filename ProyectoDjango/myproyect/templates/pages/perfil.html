@@ -1,0 +1,185 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap " rel="stylesheet">
+    <link rel="icon" href="{% static 'img/icon/icono_ws-transformed.ico' %}">
+
+    <title>Perfil</title>
+
+</head>
+
+<body>
+    <header class="page_header">
+        <section class="container">
+            <nav class="navbar">
+                <picture class="logo_container">
+                    <a href="{% url 'index' %} ">
+                        <img class="logo" src="{% static 'img/logo_white.png' %}" alt="Logo">
+                    </a>
+                </picture>
+                <div class="navigation_content">
+                    <ul class="nav_menu nav_menu_visible">
+                        <li class="nav_menu_item"><a href="{% url 'index' %}" class="navbar_Item">Inicial</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'garage' %}" class="navbar_Item">Garage</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'venta_auto' %}" class="navbar_Item">Vende tu Auto</a></li>
+                        <li class="nav_menu_item"><a href="{% url 'contacto' %}" class="navbar_Item">Contacto</a></li>
+                        
+                    </ul>
+                    <div class="container_user_section">
+                        <!--- <a id="login" class="user_section" href="{% url 'login' %}">Inicial Sesion</a>--->
+                        <!--- <a id="sing_up" class="user_section" href="{% url 'registro_user' %}">Registrarse</a> --->
+                        <a id="profile" class="user_section" href="{% url 'perfil' %}">Perfil</a>
+                        <a id="logout" class="user_section" href="{% url 'index' %}">Logout</a>
+                    </div>
+                </div>
+                <button class="hamburger">
+                    <div class="hamburger_line1"></div>
+                    <div class="hamburger_line2"></div>
+                    <div class="hamburger_line3"></div>
+                </button>
+            </nav>
+        </section>
+        </section>
+    </header>
+
+    <main class="container">
+        <div class="left">
+          <picture>
+            <img class="foto_usuario" src="{% static 'img/foto_perfil.jpeg' %}" alt="foto_del_usuario">
+          </picture>
+        </div>
+        <div class="right">
+          <section id="perfil">
+            <h1><b><u>PERFIL</u></b></h1>
+            <br><br>
+            <div class="info_perfil">
+              <p><b>Nombre: </b>Julio Gonzalez</p>
+              <p><b>D.N.I.: </b>34.234.676-87</p>
+              <p><b>Fecha Nascimiento: </b>24/09/1980</p>
+              <br>
+              <p><b>Mail: </b>julio_g@mail.com.ar</p>
+              <p><b>Clave: </b>*******</p>              
+              <p><b>Telefono: </b>11-5754-9876</p>
+              <br>
+              <a class="actualizar_datos" href="{% url 'registro_user' %}"><i class="fa-solid fa-gear fa-spin"></i> Cambiar datos  </a>
+
+              
+            </div>
+          </section>
+          
+        </div>
+      </main>
+
+
+    <!--INICIO DE FAVORITOS-->
+
+    <b></b>
+
+
+    <section class="new_cars">
+        <section class="container">
+            <div class="title_container">
+                
+                <h2 class="title_new_auto"><b><u> <i class="fa-regular fa-star" style="color: #1569f9;"> FAVORITOS </i></u></b></h2>
+                <p id="new_cars_info">Encuentra tu próximo vehículo. ¡Explora
+                    ahora!</p>
+            </div>
+            <div class="car_cards_container">
+                <article class="card">
+                    <img class="img_at" src="{% static '/img/auto6.jpeg' %} " alt="auto nuevo 1" />
+                    <div class="card_info">
+                        <h5 class="card_title">FORD</h5>
+                        <div class="details">
+                            <span class="car_price">$90000</span>
+                            <a class="see_details" href="#">ver detalles</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img class="img_at" src="{% static '/img/auto5.jpeg' %}" alt="auto nuevo 3" />
+                    <div class="card_info">
+                        <h5 class="card_title">JEEP</h5>
+                        <div class="details">
+                            <span class="car_price">$109700</span>
+                            <a class="see_details" href="#">ver detalles</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img class="img_at" src="{% static '/img/auto4.jpeg' %}" alt="auto nuevo 1" />
+                    <div class="card_info">
+                        <h5 class="card_title">BMW</h5>
+                        <div class="details">
+                            <span class="car_price">$100000</span>
+                            <a class="see_details" href="#">ver detalles</a>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+    </section>
+
+
+<!--AQUI INICIO DEL FOOTER-->
+
+
+
+<footer class="footer_page">
+    <section class="container">
+        <section class="footer_section">
+            <a class="logo_container" href="{% url 'perfil' %}">
+                <img class="logo" src="{% static 'img/logo_white.png' %}" alt="Logo">
+            </a>
+            <ul class="fotter_column">
+                <span class="footer_column_title">¿NECESITA AYUDA?</span>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Concesionarios</a></li>
+            </ul>
+            <ul class="fotter_column">
+                <span class="footer_column_title">ATENCION AL CLIENTE</span>
+                <li><a href="#">0800 700-1234</a></li>
+            </ul>
+            <ul class="fotter_column">
+                <span class="footer_column_title">CONDICIONES LEGALES</span>
+                <li><a href="#">Politicas de privacidad</a></li>
+                <li><a href="#">Menciones Legales</a></li>
+            </ul>
+        </section>
+        <div class="footer_section_social">
+            <div class="social_links">
+                <span>Segui a ATM en nuestras redes sociales:</span>
+                <ul class="social_media_container">
+                    <li>
+                        <a href="https://www.facebook.com" class="social_fb"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" class="social_tw"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" class="social_yt"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <span>@Copyright ATM Todos los derechos reservados.</span>
+        </div>
+    </section>
+  </footer>
+
+    <script src="https://kit.fontawesome.com/2bfac4fd93.js" crossorigin="anonymous"></script>
+    <script defer src="{% static '/js/nav_bar.js' %} "></script>
+</body>
+
+</html>
